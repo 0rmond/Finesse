@@ -50,7 +50,7 @@ def setup_simple(n_mirrors, cavity_length):
     ports = M.get_open_ports()
     spaces = [Space(f"s_m{n}", portA=ports[n], portB=ports[n+1], L=cavity_length) for n in range(0, 2*(n_mirrors-1), 2)]
     M.add(spaces)
-    
+
     return M
 
 def setup_cavity_with_crystal(n_mirrors, cavity_length, verbose=False, show_graph=False):
